@@ -1,13 +1,14 @@
+import { Aside } from './components/Aside.jsx'
+import { Pokemons } from './components/Pokemons.jsx'
 import './index.css'
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-3xl text-center font-bold">Mi primer ejemplo</h1>
-      </div>
-    </>
+    <section className='bg-[#F6F8FC] h-screen font-outfit overflow-y-auto'>
+      <main className='max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_350px]'>
+        <Pokemons />
+        <Aside />
+      </main>
+    </section>
   )
 }
-
-export default App

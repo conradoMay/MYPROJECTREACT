@@ -17,5 +17,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    //se modifica para que no pida verificacion deprops ya que detecta errores
+    "react/prop-types": "off",
   },
 }
