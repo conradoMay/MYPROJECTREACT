@@ -2,8 +2,8 @@ import { createContext, useState } from "react";
 
 const PokemonContext  = createContext();
 
-const PokemonProvider = ({children}) => {
-    const [showDetailtPokemon, setShowDetailPokemon] = useState(false);
+const PokemonProvider = ({ children }) => {
+    const [showDetailPokemon, setShowDetailPokemon] = useState(false);
 
     /* clic the pokemon id (onClick), then show in screen by details*/
     const showPokemonById = () => {
@@ -16,7 +16,7 @@ const PokemonProvider = ({children}) => {
     }
 
     return (
-        <PokemonContext.Provider value={{showDetailtPokemon, showPokemonById, closePokemonDetail,}}>
+        <PokemonContext.Provider value={{ showDetailPokemon, showPokemonById, closePokemonDetail }}>
             {children}
         </PokemonContext.Provider>
     )

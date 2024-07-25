@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 
-const PokemonCards = ({ pokemonURL }) => {
+const PokemonCards = ({ pokemonURL, onClick }) => {
 
     //console.log({pokemonURL});
     const [pokemon, setPokemon] = useState(null);
@@ -37,7 +37,7 @@ const PokemonCards = ({ pokemonURL }) => {
     }, [])
 
   return (
-  <article className="text-center bg-white rounded-[30px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/10 border-2 border-transparent hover:border-slate-200 cursor-pointer group grid gap-2">
+  <article onClick={onClick} className="text-center bg-white rounded-[30px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/10 border-2 border-transparent hover:border-slate-200 cursor-pointer group grid gap-2">
     <header className="h-9 shadow-lg">
         <img 
         className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 group-hover:scale-150 transition-transform pixelated"

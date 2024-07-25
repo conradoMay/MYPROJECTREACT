@@ -41,9 +41,9 @@ export const Pokemons = () => {
 
   /* useEffect by scroll and variable */
  useEffect(() => {
-    if(isVisible){
+  const maxPokemons = pokemonsByName.length
+    if(isVisible && maxPokemons != 0){
       /* limit with pokemons filters by name */
-      const maxPokemons = pokemonsByName.length
       const newLimit = limit + increase_limit;
       newLimit > maxPokemons ? setLimit(maxPokemons) : setLimit(newLimit);
     }
@@ -65,7 +65,7 @@ export const Pokemons = () => {
             name="pokemonName"
             onChange={handleChangePokemonName}
             />
-            <button className="bg-orange-600 p-2 rounded-xl shadow-md shadow-orange-600 hover:bg-orange-400 transition-colors">
+            <button type="button" className="bg-orange-600 p-2 rounded-xl shadow-md shadow-orange-600 hover:bg-orange-400 transition-colors">
               <IconSearch color="white" stroke={3}/>
             </button>
           </div>
